@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.navercorp.com/lucy-xss-servlet">
+    <defenders>
+        <!-- register XssSaxFilter -->
+        <defender>
+            <name>xssSaxFilterDefender</name>
+            <class>com.navercorp.lucy.security.xss.servletfilter.defender.XssSaxFilterDefender</class>
+            <init-param>
+                <param-value>lucy-xss-sax.xml</param-value>   <!-- lucy-xss-filter sax configuration-->
+                <param-value>true</param-value>        <!-- withoutComment -->
+            </init-param>
+        </defender>
+    </defenders>
+
+    <default>
+        <defender>xssSaxFilterDefender</defender>
+    </default>
+</config>
